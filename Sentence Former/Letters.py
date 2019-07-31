@@ -1,4 +1,3 @@
-
 def print_matrix(matrix):
     for i in matrix:
         for j in i:
@@ -414,19 +413,6 @@ def tester():
     for i in a:
         exec('print_matrix('+chr(i)+'({}))'.format(size))
         print()
-                
-                
-                 
-            
-            
-            
-            
-            
 
-    
-                
-            
-
-            
-                    
-    
+if(__name__=="__main__"):
+    tester()            

@@ -1,8 +1,0 @@
- 0123456
-0M     M
-1MM   MM 
-2M M M M
-3M  M  M
-4M     M
-5M     M
-6M     M
