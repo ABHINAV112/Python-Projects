@@ -1,3 +1,4 @@
+from sys import argv
 def print_matrix(matrix):
     for i in matrix:
         for j in i:
@@ -414,5 +415,22 @@ def tester():
         exec('print_matrix('+chr(i)+'({}))'.format(size))
         print()
 
+
 if(__name__=="__main__"):
-    tester()            
+        if(len(argv)>1):
+                sentence = argv[1]
+                letter_size = int(argv[2])
+        else:
+                sentence = input("Please enter your sentence:")
+                letter_size = int(input("enter in the size of the letter"))
+        sentence = sentence.upper()
+        output = [ [] for i in range(letter_size) ]
+        for i in sentence:
+                if(i.isalpha()):
+                        exec("curr_letter = {}({})".format(i,letter_size))
+                else:
+                        curr_letter = empty_matrix(letter_size)
+                for j in range(len(curr_letter)):
+                        output[j]+=curr_letter[j]+[" "]
+
+        print_matrix(output)
