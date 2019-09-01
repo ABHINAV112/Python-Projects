@@ -11,6 +11,7 @@ def bubble_sort(array):
                 array[i+1] = temp
     return(array)
 
+
 def merge_sort(array):
     if(len(array)==1):
         return array
@@ -22,6 +23,7 @@ def merge_sort(array):
         array2 = merge_sort(array2)
 
         return merge(array1,array2)
+
 
 def merge(arr1,arr2):
     output = []
@@ -55,12 +57,9 @@ if(__name__=="__main__"):
     else:
         msg = "unsorted"
         unsorted_list = argv[1:]
-        for i in unsorted_list:
-            i = int(i)
-
+        for i in range(len(unsorted_list)):
+            unsorted_list[i] = int(unsorted_list[i])
 
     print(msg + " list:",unsorted_list)
-
     sorted_list = merge_sort(unsorted_list)
-
     print("sorted list:",sorted_list)

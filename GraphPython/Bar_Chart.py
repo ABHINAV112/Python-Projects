@@ -12,6 +12,7 @@ screen.bgcolor('black')     #screen background
 Origin = (-280, -280)       #origin as a tuple
 cursor.hideturtle()         
 File = argv[1]           #file for data to be extracted from
+name_x = argv[2]         #name of the x bar   
 #getting the data from the file
 def data_extract(FileName):
     try:    # checking whether the file is found in the directory
@@ -99,7 +100,7 @@ def Axis(List,max):
     cursor.stamp()
     cursor.penup()
     cursor.forward(20)
-    cursor.write('sepal length',align='center',font=('Arial',12,'normal'))
+    cursor.write(name_x,align='center',font=('Arial',12,'normal'))
     #resetting to the origin
     cursor.penup()
     cursor.goto(Origin)
